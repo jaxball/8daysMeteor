@@ -1,0 +1,21 @@
+<template name="myEvent">	
+	{{> coffeeAlerts}}
+	<div class="col-lg-6">
+		<form class="new-event">
+				<input type="text" class="form-control" id="input" name="name" placeholder="Organizer">
+				<div class="input-group">
+				<input type="text" class="form-control" id="input" name="event" placeholder="Event Description">
+				<span class="input-group-btn">
+	        		<button class="btn btn-default" type="submit">Bingo!</button>
+	      		</span>
+				<!-- <input type="submit" value="Submit"> -->
+			</div>
+		</form>
+		<br>
+	</div>
+	<ul class="list-group">
+		{{#each myEvents}}
+			<li class="list-group-item">{{name}}: <a href="{{pathFor route='events'}}">{{event}}</a></li>
+		{{/each}}
+	</ul>
+</template>
